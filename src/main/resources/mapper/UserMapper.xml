@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.it.sf.dao.UserMapper">
+
+    <insert id="saveUser" parameterType="com.it.sf.model.UserVo">
+        insert into user(name,pass_word,mobile,create_time,update_time) values(#{username},#{password},#{mobile},now(),now())
+    </insert>
+
+    <update id="updateUser" parameterType="com.it.sf.model.UserVo">
+        update user
+       <trim prefix="set" suffixOverrides="," prefixOverrides=",">
+           <if test="password != null and password  !=''">
+                 pass_word = #{password}
+           </if>
+       </trim>
+        <where>
+             mobile = #{mobile}
+        </where>
+
+    </update>
+
+    <select id="getUser" parameterType="com.it.sf.model.UserVo" resultType="com.it.sf.model.UserVo">
+        select name username,pass_word password,user_code userCode from user
+          <trim prefix="where" prefixOverrides="and | or">
+                  <if test="username !=null and username !=''">
+                      and name=#{username}
+                  </if>
+                  <if test="mobile !=null and mobile !=''">
+                      and mobile=#{mobile}
+                  </if>
+          </trim>
+
+
+    </select>
+
+</mapper>

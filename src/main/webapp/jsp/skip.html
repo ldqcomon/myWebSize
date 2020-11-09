@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <div style="align-content: center">
+        <p><span id="skip"></span>秒后跳转到主页面</p>
+    </div>
+
+
+<script type="text/javascript">
+    var t = 5;
+    function showTime() {
+        t -= 1;
+        document.getElementById('skip').innerHTML = t;
+        if (t == 0) {
+            window.location.href = 'yanhua.html';
+           // window.location.href = 'http://www.baidu.com';
+        }
+        setTimeout("showTime()", 1000);
+    }
+
+    showTime();
+</script>
+
+</body>
+</html>

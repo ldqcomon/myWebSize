@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="/demo/css/css_easy_ui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="/demo/css/css_easy_ui/themes/icon.css" rel="stylesheet" />
+    <link href="/demo/css/css_easy_ui/themes/color.css" rel="stylesheet" />
+    <link href="/demo/css/css_easy_ui/add_music.css" rel="stylesheet" />
+    <script src="/demo/js/music/jquery.min.js"></script>
+    <script src="/demo/js/music/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/demo/js/music/menu.js"></script>
+    <title>添加歌曲</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="server">
+        <h3 class="apply_title">添加歌曲</h3>
+        <form id="uploadForm">
+            <table class="table">
+                <tr>
+                    <td colspan="6" class="head">歌曲信息</td>
+                </tr>
+                <tr>
+                    <td class="first">歌曲名<span class="xing">*</span>：</td>
+                    <td class="input"><input type="text" id="title" value="" /></td>
+                    <td class="first">歌手<span class="xing">*</span>：</td>
+                    <td class="input"><input type="text" id="artist" value="" /></td>
+                    <td class="first">所属专辑：</td>
+                    <td class="input"><input type="text" id="album" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="head">频道信息</td>
+
+                </tr>
+                <tr>
+                    <td class="first">所属频道<span class="xing">*</span>：</td>
+                    <td class="input"><input type="text" id="channelId" value="" /></td>
+                    <td class="first">频道类型<span class="xing">*</span>：</td>
+                    <td class="input" colspan="4"><input type="text" id="channelType" value="" /></td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="head">上传歌曲</td>
+                </tr>
+                <tr>
+                    <td class="first">上传图片<span class="xing">*</span>：</td>
+                    <td class="input" colspan="5">
+                        <input type="file" onchange="changeButton('1')"
+                               accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"
+                               name="file" id="fileImage" value="" />
+                        <button id="uploadImage" type="text" onclick="upload('1')" class="easyui-linkbutton c1" style="width:50px;">上传</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first">上传歌曲<span class="xing">*</span>：</td>
+                    <td class="input" colspan="5">
+                        <input type="file" accept="audio/*" name="file" id="fileVideo" value="" onchange="changeButton('2')" />
+                        <button id="uploadVideo" type="text" onclick="upload('2')" class="easyui-linkbutton c1" style="width:50px;">上传</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="head">歌词 <span class="xing">*</span></td>
+                </tr>
+                <tr>
+                    <td class="secend" style="height:60px;" colspan="6">
+                        <textarea id="lyric" rows="4" cols="131" style="resize:none;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="head">备注</td>
+                </tr>
+                <tr>
+                    <td class="secend" style="height:60px;" colspan="6">
+                        <textarea  id="remarks" rows="4" cols="131" style="resize:none;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" style="height:40px;">
+                        <button id="tijiao" type="text" class="easyui-linkbutton c1" style="width:50px;">提交</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+    </div>
+    <script>
+        $(function () {
+            $(".apply_proaddr").hide();
+            $(".apply_counaddr").hide();
+            1
+        })
+        $(".apply_range").change(function () {
+            var name = $(this).val();
+            console.log(name);
+            if (name=="国内") {
+                $(".apply_proaddr").show();
+                $(".apply_counaddr").hide();
+            } else if (name=="国外") {
+                $(".apply_proaddr").hide();
+                $(".apply_counaddr").show ();
+            } else if (name=="请选择") {
+                $(".apply_proaddr").hide();
+                $(".apply_counaddr").hide();
+            } 
+        })
+    </script>
+</body>
+</html>

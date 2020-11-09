@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>黑洞</title>
+    <script type="text/javascript" src="/demo/js/jquery-1.9.1.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/demo/css/chat.css"/>
+    <script type="text/javascript" src="/demo/js/chat.js"></script>
+    <script src="/demo/js/music/flexible.js" type="text/javascript" charset="utf-8"></script>
+
+
+</head>
+<body>
+<span></span>
+
+<div id="chatRoom2">
+    <span id="logout">
+    <a href="/demo/index/logout"><img src="/demo/images/music/logout.jpg"></a>
+</span>
+    <span id="music">
+    <a href="/demo/jsp/music/music.html"><img src="/demo/images/music/yinyue.jpg"></a>
+</span>
+    <br/>
+    <span id="manage">
+    <img onclick="topage(1)" src="/demo/images/music/manage/manage.jpg">
+</span>
+    <div id="chatRoom">
+        <br>黑洞2020<br/><br/>
+        <textarea id="content" cols="60" rows="35" readonly="readonly"></textarea><br>
+    </div>
+    <div id="inputAndButton">
+        <input type="text" id="sendMsg">
+        <button type="button" onclick="sendMsg()">发送消息</button>
+        <br/><br/>
+        <input type="text" id="user" disabled="disabled" value="">
+        <button id="joinRoom">加入群聊</button>
+        <button onclick="exitRoom()">退出群聊</button>
+        <br/><br/>
+        <button onclick="changeImage()">设置聊天背景</button>
+        <button onclick="animation()" id="animation">动画停</button>
+        <!--    <div>-->
+        <!--        <audio controls style="background-color: #111727;position: relative">-->
+        <!--            <source src="/demo/musics/luzhouyue.ogg" type="audio/mpeg">-->
+        <!--        </audio>-->
+        <!--    </div>-->
+    </div>
+
+</div>
+
+
+</body>
+
+</html>

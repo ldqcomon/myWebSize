@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.it.sf.dao.MusicMapper">
+    <select id="getMusicChannel" parameterType="com.it.sf.model.MusicChannelVo" resultType="com.it.sf.model.MusicChannelVo">
+        select name ,channel_id channelId,cover_big coverBig, cover_middle coverMiddel,cover_small coverSmall from music_channel
+          <trim prefix="where" prefixOverrides="and | or">
+                  <if test="name !=null and name !=''">
+                      and name=#{name}
+                  </if>
+                  <if test="channelId !=null and channelId !=''">
+                      and channel_id=#{channelId}
+                  </if>
+          </trim>
+    </select>
+
+    <select id="getMusicSongs" parameterType="com.it.sf.model.MusicSongVo" resultType="com.it.sf.model.MusicSongVo">
+        select sid ,title , artist ,picture ,url,cid channelId,lrc from music_songs
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="sid !=null and sid !=''">
+                and sid=#{sid}
+            </if>
+            <if test="channelId !=null and channelId !=''">
+                and cid=#{channelId}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getLyric" parameterType="com.it.sf.model.MusicSongVo" resultType="com.it.sf.model.MusicSongVo">
+        select sid ,cid channelId,lrc lyric from music_songs
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="sid !=null and sid !=''">
+                and sid=#{sid}
+            </if>
+            <if test="channelId !=null and channelId !=''">
+                and cid=#{channelId}
+            </if>
+        </trim>
+    </select>
+
+    <insert id="addMusicSongs" parameterType="com.it.sf.model.MusicSongVo">
+        insert into music_songs
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="sid != null">
+                sid,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="artist != null">
+                artist,
+            </if>
+            <if test="album != null">
+                album,
+            </if>
+            <if test="channelId != null">
+                cid,
+            </if>
+            <if test="channelType != null">
+                channel_type,
+            </if>
+            <if test="picture != null">
+                picture,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="lyric != null">
+                lrc,
+            </if>
+            <if test="remarks != null">
+                remarks,
+            </if>
+                create_time
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="sid != null">
+                #{sid},
+            </if>
+            <if test="title != null">
+                #{title},
+            </if>
+            <if test="artist != null">
+                #{artist},
+            </if>
+            <if test="album != null">
+                #{album},
+            </if>
+            <if test="channelId != null">
+                #{channelId},
+            </if>
+            <if test="channelType != null">
+                #{channelType},
+            </if>
+            <if test="picture != null">
+                #{picture},
+            </if>
+            <if test="url != null">
+                #{url},
+            </if>
+            <if test="lyric != null">
+                #{lyric},
+            </if>
+            <if test="remarks != null">
+                #{remarks},
+            </if>
+                now()
+        </trim>
+    </insert>
+
+</mapper>

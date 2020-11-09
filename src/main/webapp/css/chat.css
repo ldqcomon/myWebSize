@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #000;
+    overflow: hidden;
+    height: 100%;
+}
+
+span {
+    width: 30px;
+    height: 30px;
+    background: url("/demo/images/star.png") no-repeat;
+    position: absolute;
+    background-size: 100% 100%;
+    animation: flash 1s alternate infinite;
+}
+
+#music {
+    border-radius: 50%;
+    margin-left: 800px;
+    margin-top: 80px;
+    border: cornflowerblue;
+    position: absolute;
+}
+
+#logout {
+    border-radius: 50%;
+    margin-left: 800px;
+    margin-top: 10px;
+    border: #ffff99;
+    position: absolute;
+}
+
+#manage {
+    border-radius: 50%;
+    margin-left: 800px;
+    border: cornflowerblue;
+    position: absolute;
+    margin-top: 130px;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+span:hover {
+    transform: scale(3, 3) rotate(180deg) !important;
+    transition: all 1s;
+}
+
+#chatRoom2 {
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #000;
+    height: 800px;
+    width: 700px;
+    position: relative;
+}
+
+#chatRoom {
+    text-align: center;
+    background-color: snow;
+    border-radius: 10px;
+    border: 1px solid #000;
+    margin-top: 90px;
+}
+
+textarea {
+    background: url("/demo/images/mn2.jpg") no-repeat;
+    /* contain:把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域。*/
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    color-adjust: economy;
+    opacity: 0.8;
+    animation: fateimg 80s linear infinite;
+    width: 700px;
+    height: 600px;
+}
+
+/*聊天背景图片渐变切换*/
+@keyframes fateimg {
+    0% {
+        background: url(/demo/images/mn1.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    5% {
+        background: url(/demo/images/mn1.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    8% {
+        background: url(/demo/images/mn1.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    10% {
+        background: url(/demo/images/mn2.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    15% {
+        background: url(/demo/images/mn2.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    18% {
+        background: url(/demo/images/mn2.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    20% {
+        background: url(/demo/images/mn3.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    25% {
+        background: url(/demo/images/mn3.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    28% {
+        background: url(/demo/images/mn3.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    30% {
+        background: url(/demo/images/mn4.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    35% {
+        background: url(/demo/images/mn4.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    38% {
+        background: url(/demo/images/mn4.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    40% {
+        background: url(/demo/images/mn5.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    45% {
+        background: url(/demo/images/mn5.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    48% {
+        background: url(/demo/images/mn5.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    50% {
+        background: url(/demo/images/mn6.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    55% {
+        background: url(/demo/images/mn6.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    58% {
+        background: url(/demo/images/mn6.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    60% {
+        background: url(/demo/images/mn7.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    65% {
+        background: url(/demo/images/mn7.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    67% {
+        background: url(/demo/images/mn7.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    68% {
+        background: url(/demo/images/mn8.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    69% {
+        background: url(/demo/images/mn8.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    71% {
+        background: url(/demo/images/mn8.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    72% {
+        background: url(/demo/images/mn9.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    73% {
+        background: url(/demo/images/mn9.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    75% {
+        background: url(/demo/images/mn9.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    76% {
+        background: url(/demo/images/mn10.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    77% {
+        background: url(/demo/images/mn10.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    80% {
+        background: url(/demo/images/mn10.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    81% {
+        background: url(/demo/images/mn11.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    83% {
+        background: url(/demo/images/mn11.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    85% {
+        background: url(/demo/images/mn11.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    86% {
+        background: url(/demo/images/mn12.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    87% {
+        background: url(/demo/images/mn12.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    90% {
+        background: url(/demo/images/mn12.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    91% {
+        background: url(/demo/images/mn13.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    92% {
+        background: url(/demo/images/mn13.jpg);
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    100% {
+        background: url(/demo/images/mn13.jpg);
+        opacity: 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+}
+
+button {
+    color: crimson;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #09c4ed;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 6px;
+
+}
+
+#inputAndButton {
+    text-align: center;
+    margin: 20px auto;
+}

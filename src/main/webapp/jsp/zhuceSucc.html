@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<link type="text/css" rel="stylesheet" href="/demo/css/zhuce.css" />
+<script type="text/javascript" src="/demo/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/demo/js/zhuce.js"></script>
+<script type="text/javascript">
+</script>
+</head>
+
+<body>
+<div class="main">
+    <div style="margin:20px auto;width: 250px;background-color: #000;border-radius: 8px">
+        <p style="color: red">注册成功,<span id="skip"></span>秒后跳转到登录页面</p>
+    </div>
+  <div class="main0">
+     <div class="main_left">
+        <img src="/demo/images/zhuce-over-3.png" class="theimg"/>
+        <img src="/demo/images/zhuce-over-2.png" class="secimg"/>
+        <img src="/demo/images/zhuce-over-1.png" class="firimg"/>
+     </div>
+     <div class="main_right">
+        <div class="main_r_up">
+            <img src="/demo/images/user.png" />
+            <div class="pp">注册</div>
+        </div>
+        <div class="sub"><p>已经注册？<a href="/jsp/login.jsp"><span class="blue">请登录</span></a></p></div>
+        <div>
+           <div class="font24"><span class="blue" style=" padding-right:20px">-^0^-</span>注册成功！</div>
+           <div class="font16">恭喜您获得 <span class="blue" style=" font-size:20px">50元</span> 注册红包！</div>
+           <div class="font14">赶快行动起来吧！<a href="javascript:;"><span class="blue">前往充值</span></a></div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer0">
+     <div class="footer_l">使用条款 | 隐私保护</div>
+     <div class="footer_r">© 2020 （深圳）show_on信息服务有限公司    深ICP备0000000号</div>
+  </div> 
+</div>
+
+<script type="text/javascript">
+    // 10秒倒数,定时器
+    window.onload = function () {
+        var count = document.getElementById("skip");
+        var num = 20;
+        var timer = setInterval(function () {
+            count.innerHTML = num--;
+            if(num == 0){
+                clearInterval(timer);
+                window.location.href = '../jsp/login.jsp';
+            }
+
+        },1000);
+    }
+
+</script>
+</body>
+
+</html>
